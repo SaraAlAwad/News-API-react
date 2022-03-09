@@ -46,7 +46,7 @@ const NewsApi = () => {
                 return (
                     <article>
                         <div className="image">
-                            <img src={items.urlToImage} alt="no-photo" />
+                            <img src={items.urlToImage} alt="url" />
                         </div>
                         <div className="content">
                             <p className="title">{items.title}</p>
