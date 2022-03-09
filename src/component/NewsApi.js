@@ -16,7 +16,7 @@ const NewsApi = () => {
         fetch(`https://newsapi.org/v2/everything?q=${newType}&language=en&apiKey=33957bdcbea740f8ab8092438e8b380e`)
             .then(response => response.json())
             .then(json => {
-                if (loaded) {
+                {
                     console.log(json.articles)
                     setJsonArr(json.articles)
                 }
@@ -29,7 +29,7 @@ const NewsApi = () => {
         <>
             <section>
                 <button onClick={() => setNewType('ukraine')}>Ukraine</button>
-                <button onClick={() => setNewType('business')}>business</button>
+                <button onClick={() => setNewType('business')}>Business</button>
                 <button onClick={() => setNewType('lifestyle')}>Lifestyle</button>
                 <button onClick={() => setNewType('bitcoin')}>Bitcoin</button>
                 <button onClick={() => setNewType('economy')}>Economy</button>
