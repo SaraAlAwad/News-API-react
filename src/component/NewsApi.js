@@ -12,14 +12,11 @@ const NewsApi = () => {
 
 
     useEffect(() => {
-
         fetch(`https://newsapi.org/v2/everything?q=${newType}&language=en&apiKey=33957bdcbea740f8ab8092438e8b380e`)
             .then(response => response.json())
             .then(json => {
-                {
-                    console.log(json.articles)
-                    setJsonArr(json.articles)
-                }
+                console.log(json.articles)
+                setJsonArr(json.articles)
             })
     }, [newType])
 
