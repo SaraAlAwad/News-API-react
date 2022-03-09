@@ -12,7 +12,7 @@ const NewsApi = () => {
 
 
     useEffect(() => {
-        let loaded = true
+
         fetch(`https://newsapi.org/v2/everything?q=${newType}&language=en&apiKey=33957bdcbea740f8ab8092438e8b380e`)
             .then(response => response.json())
             .then(json => {
@@ -21,10 +21,6 @@ const NewsApi = () => {
                     setJsonArr(json.articles)
                 }
             })
-        return () => {
-            loaded = false
-            console.log('process stopped');
-        }
     }, [newType])
 
 
